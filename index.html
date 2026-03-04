@@ -11,8 +11,8 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Кинолог Ася Окорочкова | Гармония. Понимание. Собака.">
     <meta property="og:description" content="Помогу понять вашу собаку и решить проблемы в поведении без жестких методов. Запишитесь на консультацию!">
-    <meta property="og:url" content="https://asyaok.ru/">
-    <meta property="og:image" content="https://asyaok.ru/images/asya-og-image.jpg"> 
+    <meta property="og:url" content="http://asyaok.ru/">
+    <meta property="og:image" content="http://asyaok.ru/images/asya-og-image.jpg"> 
     <meta property="og:site_name" content="Кинолог Ася Окорочкова">
 
     <meta name="theme-color" content="#ffffff">
@@ -888,7 +888,7 @@
             </div>
 
             <!-- Mobile Burger (Right) -->
-            <button class="burger-btn" id="menuToggle">
+            <button class="burger-btn" id="menuToggle" style="color: black;">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
             </button>
 
@@ -1302,10 +1302,23 @@
             observer.observe(el);
         });
     </script>
-    <div id="cookie-notice" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(30, 30, 30, 0.95); color: #fff; padding: 15px 20px; text-align: center; z-index: 9999; font-size: 14px; font-family: sans-serif; box-sizing: border-box;">
-        Мы используем файлы cookie и Яндекс Метрику для анализа трафика и улучшения работы сайта. Оставаясь с нами, вы соглашаетесь с 
-        <a href="policy.html" target="_blank" style="color: #fff; text-decoration: underline;">Политикой конфиденциальности</a>.
-        <button onclick="acceptCookies()" style="margin-left: 20px; padding: 8px 20px; background: #fff; color: #000; border: none; border-radius: 9999px; cursor: pointer; font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; transition: 0.2s;">Понятно</button>
+    <style>
+        @media (min-width: 768px) {
+            #cookie-notice {
+                flex-direction: row !important;
+            }
+            #cookie-notice span {
+                margin-bottom: 0 !important;
+                margin-right: 15px;
+            }
+        }
+    </style>
+    <div id="cookie-notice" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(30, 30, 30, 0.95); color: #fff; padding: 15px 20px; text-align: center; z-index: 9999; font-size: 14px; font-family: sans-serif; box-sizing: border-box; display: flex; flex-direction: column; align-items: center;">
+        <span style="margin-bottom: 10px;">
+            Мы используем файлы cookie и Яндекс Метрику для анализа трафика и улучшения работы сайта. Оставаясь с нами, вы соглашаетесь с 
+            <a href="policy.html" target="_blank" style="color: #fff; text-decoration: underline;">Политикой конфиденциальности</a>.
+        </span>
+        <button onclick="acceptCookies()" style="padding: 8px 20px; background: #fff; color: #000; border: none; border-radius: 9999px; cursor: pointer; font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; transition: 0.2s;">Принять</button>
     </div>
 
     <script>
