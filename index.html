@@ -729,14 +729,15 @@
 
         .podcast-platforms {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             gap: 16px;
-            justify-content: center;
             margin-top: 0;
         }
 
         @media (min-width: 768px) {
             .podcast-platforms {
+                flex-direction: row;
+                flex-wrap: wrap;
                 justify-content: flex-start;
                 margin-top: 32px;
             }
@@ -745,8 +746,9 @@
         .platform-btn {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
-            padding: 12px 24px;
+            padding: 16px 24px;
             border-radius: 9999px;
             background-color: #fafaf9;
             font-size: 10px;
@@ -754,6 +756,13 @@
             text-transform: uppercase;
             letter-spacing: 0.1em;
             transition: background-color 0.2s;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .platform-btn {
+                width: auto;
+            }
         }
 
         .platform-btn:hover {
@@ -793,11 +802,20 @@
             letter-spacing: 0.2em;
             transition: transform 0.2s;
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            display: inline-block;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .cta-btn {
+                display: inline-block;
+                width: auto;
+            }
         }
 
         .cta-btn:hover {
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
 
         /* Footer */
@@ -929,7 +947,7 @@
         
         <div class="container">
             <div class="hero-image">
-                <img src="/images/asya-hero.jpg" alt="Кинолог Ася Окорочкова дрессирует австралийского хилера в Москве. Коррекция поведения австралийского хилера" referrerPolicy="no-referrer">
+                <img src="images/asya-hero.jpg" alt="Кинолог Ася Окорочкова дрессирует австралийского хилера в Москве. Коррекция поведения австралийского хилера">
             </div>
         </div>
     </section>
@@ -943,7 +961,7 @@
                 
                 <!-- Mobile Image -->
                 <div class="mobile-image">
-                    <img src="/images/asya-philosophy.jpg" alt="Спокойный австралийский хилер на прогулке в городе. Воспитание комфортной собаки без жестких методов" referrerPolicy="no-referrer">
+                    <img src="/images/asya-philosophy.jpg" alt="Спокойный австралийский хилер на прогулке в городе. Воспитание комфортной собаки без жестких методов">
                 </div>
 
                 <div class="text-content">
@@ -955,7 +973,7 @@
             </div>
             
             <div class="desktop-image fade-in" style="transition-delay: 0.2s;">
-                <img src="/images/asya-philosophy.jpg" alt="Спокойный австралийский хилер на прогулке в городе. Воспитание комфортной собаки без жестких методов" referrerPolicy="no-referrer">
+                <img src="/images/asya-philosophy.jpg" alt="Спокойный австралийский хилер на прогулке в городе. Воспитание комфортной собаки без жестких методов">
             </div>
         </div>
     </section>
@@ -994,23 +1012,23 @@
         <div class="carousel-container">
             <div class="carousel-track animate-carousel">
                 <!-- Set 1 -->
-                <div class="carousel-card"><img src="/images/asya-kar_04.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки" referrerPolicy="no-referrer"></div>
-                <div class="carousel-card"><img src="/images/asya-kar_02.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки" referrerPolicy="no-referrer"></div>
-                <div class="carousel-card"><img src="/images/asya-kar_01.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки" referrerPolicy="no-referrer"></div>
-                <div class="carousel-card"><img src="/images/asya-kar_03.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки" referrerPolicy="no-referrer"></div>
-                <div class="carousel-card"><img src="/images/asya-kar_05.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки" referrerPolicy="no-referrer"></div>
+                <div class="carousel-card"><img src="/images/asya-kar_04.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки"></div>
+                <div class="carousel-card"><img src="/images/asya-kar_02.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки"></div>
+                <div class="carousel-card"><img src="/images/asya-kar_01.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки"></div>
+                <div class="carousel-card"><img src="/images/asya-kar_03.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки"></div>
+                <div class="carousel-card"><img src="/images/asya-kar_05.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки"></div>
                 <!-- Set 2 -->
-                <div class="carousel-card"><img src="/images/asya-kar_04.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки" referrerPolicy="no-referrer"></div>
-                <div class="carousel-card"><img src="/images/asya-kar_02.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки" referrerPolicy="no-referrer"></div>
-                <div class="carousel-card"><img src="/images/asya-kar_01.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки" referrerPolicy="no-referrer"></div>
-                <div class="carousel-card"><img src="/images/asya-kar_03.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки" referrerPolicy="no-referrer"></div>
-                <div class="carousel-card"><img src="/images/asya-kar_05.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки" referrerPolicy="no-referrer"></div>
+                <div class="carousel-card"><img src="/images/asya-kar_04.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки"></div>
+                <div class="carousel-card"><img src="/images/asya-kar_02.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки"></div>
+                <div class="carousel-card"><img src="/images/asya-kar_01.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки"></div>
+                <div class="carousel-card"><img src="/images/asya-kar_03.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки"></div>
+                <div class="carousel-card"><img src="/images/asya-kar_05.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки"></div>
                 <!-- Set 3 -->
-                <div class="carousel-card"><img src="/images/asya-kar_04.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки" referrerPolicy="no-referrer"></div>
-                <div class="carousel-card"><img src="/images/asya-kar_02.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки" referrerPolicy="no-referrer"></div>
-                <div class="carousel-card"><img src="/images/asya-kar_01.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки" referrerPolicy="no-referrer"></div>
-                <div class="carousel-card"><img src="/images/asya-kar_03.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки" referrerPolicy="no-referrer"></div>
-                <div class="carousel-card"><img src="/images/asya-kar_05.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки" referrerPolicy="no-referrer"></div>
+                <div class="carousel-card"><img src="/images/asya-kar_04.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки"></div>
+                <div class="carousel-card"><img src="/images/asya-kar_02.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки"></div>
+                <div class="carousel-card"><img src="/images/asya-kar_01.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки"></div>
+                <div class="carousel-card"><img src="/images/asya-kar_03.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки"></div>
+                <div class="carousel-card"><img src="/images/asya-kar_05.png" alt="Отзыв владельца о работе кинолога Аси Окорочковой: успешная коррекция поведения собаки"></div>
             </div>
         </div>
     </div>
@@ -1102,7 +1120,7 @@
 
                 <!-- Mobile Image -->
                 <div class="mobile-image">
-                    <img src="/images/asya-podcast.jpg" alt="Подкаст Свидетели хилеров — Трехголовый кинолог: разбор особенностей породы австралийский хилер и их поведения" referrerPolicy="no-referrer">
+                    <img src="/images/asya-podcast.jpg" alt="Подкаст Свидетели хилеров — Трехголовый кинолог: разбор особенностей породы австралийский хилер и их поведения">
                 </div>
 
                 <div class="text-content">
@@ -1137,7 +1155,7 @@
             </div>
             
             <div class="desktop-image fade-in" style="transition-delay: 0.2s;">
-                <img src="/images/asya-podcast.jpg" alt="Подкаст Свидетели хилеров — Трехголовый кинолог: разбор особенностей породы австралийский хилер и их поведения" referrerPolicy="no-referrer">
+                <img src="/images/asya-podcast.jpg" alt="Подкаст Свидетели хилеров — Трехголовый кинолог: разбор особенностей породы австралийский хилер и их поведения">
             </div>
         </div>
     </section>
@@ -1168,7 +1186,7 @@
 
                 <!-- Mobile Image -->
                 <div class="mobile-image">
-                    <img src="/images/asya-dogs.jpg" alt="Кинолог Ася Окорочкова со своими собаками породы австралийский хилер (австралийская пастушья собака) — Шеней и Василисой" referrerPolicy="no-referrer">
+                    <img src="/images/asya-dogs.jpg" alt="Кинолог Ася Окорочкова со своими собаками породы австралийский хилер (австралийская пастушья собака) — Шеней и Василисой">
                 </div>
 
                 <!-- Mobile Names -->
@@ -1209,7 +1227,7 @@
             </div>
 
             <div class="desktop-image fade-in personal-image" style="transition-delay: 0.2s;">
-                <img src="/images/asya-dogs.jpg" alt="Кинолог Ася Окорочкова со своими собаками породы австралийский хилер (австралийская пастушья собака) — Шеней и Василисой" referrerPolicy="no-referrer">
+                <img src="/images/asya-dogs.jpg" alt="Кинолог Ася Окорочкова со своими собаками породы австралийский хилер (австралийская пастушья собака) — Шеней и Василисой">
             </div>
         </div>
     </section>
