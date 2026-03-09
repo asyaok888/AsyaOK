@@ -1324,6 +1324,7 @@
         @media (min-width: 768px) {
             #cookie-notice {
                 flex-direction: row !important;
+                justify-content: center !important;
             }
             #cookie-notice span {
                 margin-bottom: 0 !important;
@@ -1331,7 +1332,7 @@
             }
         }
     </style>
-    <div id="cookie-notice" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(30, 30, 30, 0.95); color: #fff; padding: 15px 20px; text-align: center; z-index: 9999; font-size: 14px; font-family: sans-serif; box-sizing: border-box; display: flex; flex-direction: column; align-items: center;">
+    <div id="cookie-notice" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(30, 30, 30, 0.95); color: #fff; padding: 15px 20px; text-align: center; z-index: 9999; font-size: 14px; font-family: sans-serif; box-sizing: border-box; flex-direction: column; align-items: center;">
         <span style="margin-bottom: 10px;">
             Мы используем файлы cookie и Яндекс Метрику для анализа трафика и улучшения работы сайта. Оставаясь с нами, вы соглашаетесь с 
             <a href="policy.html" target="_blank" style="color: #fff; text-decoration: underline;">Политикой конфиденциальности</a>.
@@ -1347,7 +1348,7 @@
         }
         window.onload = function() {
             if (!localStorage.getItem('cookieAccepted')) {
-                document.getElementById('cookie-notice').style.display = 'block';
+                document.getElementById('cookie-notice').style.display = 'flex';
             }
         };
     </script>
