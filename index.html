@@ -566,17 +566,17 @@
         }
 
         @keyframes carousel-stepped {
-            0%, 15% { transform: translateX(0); }
-            20%, 35% { transform: translateX(calc(-1 * (var(--card-w) + 25px) * 1)); }
-            40%, 55% { transform: translateX(calc(-1 * (var(--card-w) + 25px) * 2)); }
-            60%, 75% { transform: translateX(calc(-1 * (var(--card-w) + 25px) * 3)); }
-            80%, 95% { transform: translateX(calc(-1 * (var(--card-w) + 25px) * 4)); }
+            0%, 16% { transform: translateX(0); }
+            20%, 36% { transform: translateX(calc(-1 * (var(--card-w) + 25px) * 1)); }
+            40%, 56% { transform: translateX(calc(-1 * (var(--card-w) + 25px) * 2)); }
+            60%, 76% { transform: translateX(calc(-1 * (var(--card-w) + 25px) * 3)); }
+            80%, 96% { transform: translateX(calc(-1 * (var(--card-w) + 25px) * 4)); }
             100% { transform: translateX(calc(-1 * (var(--card-w) + 25px) * 5)); }
         }
 
         .animate-carousel {
             --card-w: calc(100vw - 48px);
-            animation: carousel-stepped 20s ease-in-out infinite;
+            animation: carousel-stepped 25s ease-in-out infinite;
         }
 
         .animate-carousel:hover {
@@ -893,6 +893,7 @@
             <div class="desktop-menu">
                 <a href="#philosophy">Философия</a>
                 <a href="#experience">Опыт</a>
+                <a href="#reviews">Отзывы</a>
                 <a href="#services">Услуги</a>
                 <a href="#podcast">Подкаст</a>
                 <a href="#personal">Жизнь</a>
@@ -922,6 +923,7 @@
         <div class="mobile-menu" id="mobileMenu">
             <a href="#philosophy" class="mobile-link">Философия</a>
             <a href="#experience" class="mobile-link">Опыт</a>
+            <a href="#reviews" class="mobile-link">Отзывы</a>
             <a href="#services" class="mobile-link">Услуги</a>
             <a href="#podcast" class="mobile-link">Подкаст</a>
             <a href="#personal" class="mobile-link">Жизнь</a>
@@ -1008,7 +1010,7 @@
     </section>
 
     <!-- Carousel Section -->
-    <div class="carousel-wrapper">
+    <div id="reviews" class="carousel-wrapper">
         <div class="carousel-container">
             <div class="carousel-track animate-carousel">
                 <!-- Set 1 -->
