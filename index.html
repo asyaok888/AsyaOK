@@ -296,6 +296,44 @@
             color: var(--color-black);
         }
 
+        .mobile-contact-menu {
+            position: absolute;
+            top: 64px;
+            left: 0;
+            width: 100%;
+            background: white;
+            border-bottom: 1px solid var(--color-stone-100);
+            padding: 32px 24px;
+            text-align: center;
+            display: none;
+            flex-direction: column;
+            gap: 24px;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.3s, transform 0.3s;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .mobile-contact-menu.open {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mobile-contact-menu a {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-gray);
+            transition: color 0.2s;
+            text-decoration: none;
+        }
+
+        .mobile-contact-menu a:hover {
+            color: var(--color-black);
+        }
+
         /* Hero Section */
         .hero {
             padding-top: 96px;
@@ -940,9 +978,9 @@
 
             <!-- Mobile Button (Center) -->
             <div class="mobile-contact-btn">
-                <a href="https://t.me/AsyaOk888?text=Здравствуйте,%20Ася!%20Я%20с%20вашего%20сайта,%20нужна%20помощь%20с%20собакой." target="_blank" onclick="ym(107145180, 'reachGoal', 'tg_click');" class="btn-contact btn-contact-sm">
+                <button id="contactMenuToggle" class="btn-contact btn-contact-sm" style="border: none; cursor: pointer;">
                     Связаться
-                </a>
+                </button>
             </div>
 
             <!-- Mobile Burger (Right) -->
@@ -952,7 +990,7 @@
 
             <!-- Desktop Button (Right) -->
             <div class="desktop-contact-btn">
-                <a href="https://t.me/AsyaOk888?text=Здравствуйте,%20Ася!%20Я%20с%20вашего%20сайта,%20нужна%20помощь%20с%20собакой." target="_blank" onclick="ym(107145180, 'reachGoal', 'tg_click');" class="btn-contact btn-contact-lg">
+                <a href="#cta" class="btn-contact btn-contact-lg">
                     Связаться
                 </a>
             </div>
@@ -966,6 +1004,13 @@
             <a href="#services" class="mobile-link">Услуги</a>
             <a href="#podcast" class="mobile-link">Подкаст</a>
             <a href="#personal" class="mobile-link">Жизнь</a>
+        </div>
+
+        <!-- Mobile Contact Menu Overlay -->
+        <div class="mobile-contact-menu" id="mobileContactMenu">
+            <a href="https://max.ru/u/f9LHodD0cOIuUk0wJU63_uVTV3DvLiPDlcaCDqar8aNBHLe8t3W2jpSe8jA" target="_blank" onclick="ym(107145180, 'reachGoal', 'max_click'); closeContactMenu();">В MAX (БЕЗ VPN)</a>
+            <a href="https://t.me/AsyaOk888?text=Здравствуйте,%20Ася!%20Я%20с%20вашего%20сайта,%20нужна%20помощь%20с%20собакой." target="_blank" onclick="ym(107145180, 'reachGoal', 'tg_click'); closeContactMenu();">В TELEGRAM</a>
+            <a href="https://vk.me/asyaok" target="_blank" onclick="ym(107145180, 'reachGoal', 'vk_click'); closeContactMenu();">ВКОНТАКТЕ</a>
         </div>
     </nav>
 
@@ -1274,7 +1319,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="section bg-white" style="text-align: center; padding-top: 64px; padding-bottom: 64px;">
+    <section id="cta" class="section bg-white" style="text-align: center; padding-top: 64px; padding-bottom: 64px;">
         <div class="container fade-in" style="max-width: 42rem;">
             <h2 class="section-title" style="margin-bottom: 40px; font-size: 3rem;">Начнем диалог?</h2>
             <p style="color: var(--color-gray); margin-bottom: 24px; font-weight: 300; line-height: 1.625;">
@@ -1305,7 +1350,7 @@
         <div style="display: flex; justify-content: center; gap: 32px; margin-bottom: 32px; font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.2em;">
             <a href="https://t.me/AsyaOk888?text=Здравствуйте,%20Ася!%20Я%20с%20вашего%20сайта,%20нужна%20помощь%20с%20собакой." target="_blank" onclick="ym(107145180, 'reachGoal', 'tg_click');" style="color: var(--color-gray); text-decoration: none; transition: color 0.2s;">Telegram</a>
             <a href="https://max.ru/u/f9LHodD0cOIuUk0wJU63_uVTV3DvLiPDlcaCDqar8aNBHLe8t3W2jpSe8jA" target="_blank" onclick="ym(107145180, 'reachGoal', 'max_click');" style="color: var(--color-gray); text-decoration: none; transition: color 0.2s;">MAX</a>
-            <a href="https://vk.com/asyaok" target="_blank" onclick="ym(107145180, 'reachGoal', 'vk_click');" style="color: var(--color-gray); text-decoration: none; transition: color 0.2s;">Вконтакте</a>
+            <a href="https://vk.me/asyaok" target="_blank" onclick="ym(107145180, 'reachGoal', 'vk_click');" style="color: var(--color-gray); text-decoration: none; transition: color 0.2s;">Вконтакте</a>
         </div>
 
         <p style="margin-bottom: 5px;">© 2026 Ася Окорочкова. Все права защищены.</p>
@@ -1328,11 +1373,16 @@
         const menuIcon = menuToggle.querySelector('svg');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
+        const contactMenuToggle = document.getElementById('contactMenuToggle');
+        const mobileContactMenu = document.getElementById('mobileContactMenu');
+
         let isMenuOpen = false;
+        let isContactMenuOpen = false;
 
         function toggleMenu() {
             isMenuOpen = !isMenuOpen;
             if (isMenuOpen) {
+                if (isContactMenuOpen) toggleContactMenu();
                 mobileMenu.classList.add('open');
                 menuIcon.innerHTML = '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>'; // X icon
             } else {
@@ -1341,13 +1391,37 @@
             }
         }
 
+        function toggleContactMenu() {
+            isContactMenuOpen = !isContactMenuOpen;
+            if (isContactMenuOpen) {
+                if (isMenuOpen) toggleMenu();
+                mobileContactMenu.classList.add('open');
+            } else {
+                mobileContactMenu.classList.remove('open');
+            }
+        }
+
+        function closeContactMenu() {
+            if (isContactMenuOpen) toggleContactMenu();
+        }
+
         menuToggle.addEventListener('click', toggleMenu);
+        contactMenuToggle.addEventListener('click', toggleContactMenu);
 
         // Close menu when clicking a link
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 if (isMenuOpen) toggleMenu();
             });
+        });
+
+        // Close menus when clicking outside
+        document.addEventListener('click', (event) => {
+            const nav = document.querySelector('.navbar');
+            if (nav && !nav.contains(event.target)) {
+                if (isMenuOpen) toggleMenu();
+                if (isContactMenuOpen) toggleContactMenu();
+            }
         });
 
         // Fade In Animation (Intersection Observer)
